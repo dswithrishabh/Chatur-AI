@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+var = pd.read_csv('airlines data.csv')
+
+# Convert to datetime
+'''var['departure_time'] = pd.to_datetime(var['departure_time'])
+var['arrival_time'] = pd.to_datetime(var['arrival_time'])'''
+
+# Plot line
+plt.bar(var['departure_time'], var['arrival_time'])
+plt.xlabel('Departure Time')
+plt.ylabel('Arrival Time')
+plt.title('Departure vs Arrival Time')
+plt.show()
